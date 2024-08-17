@@ -2,6 +2,16 @@
 
 C'est un projet qui a pour objectif de faire bouger les gens et de leur faire decouvrir le street art. Ce site doit respecter l'accessibilite, dont le daltonisme.
 
+Setup & Use
+Windows users: be sure to run these commands in a git terminal to avoid issues with newline formats:
+
+`git config --global core.eol lf`
+`git config --global core.autocrlf false`
+
+- In VSCode, install plugins `Prettier` - Code formatter and `ESLint` and configure them
+- Clone this repo, enter it
+- Run command `npm install`
+- Create environment files (`.env`) in both `server` and `client` : you can copy `.env.sample` files as starters (don't delete them)
 
 ### Available Commands
 
