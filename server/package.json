@@ -30,6 +30,7 @@
   },
   "lint-staged": {
     "*.sql": "prettier --check",
+    "*.{html,scss,css,jsx,js}": "prettier --write",
     "*.js": "eslint --report-unused-disable-directives"
   }
 }
