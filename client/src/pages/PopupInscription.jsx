@@ -1,6 +1,6 @@
+import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
 import closePopup from "../assets/patterns/Close-Button.svg";
 
 const url = import.meta.env.VITE_API_URL;
@@ -29,6 +29,7 @@ function PopupInscription() {
     e.preventDefault();
     try {
       await axios.post(`${url}/api/persons`, formData);
+      alert("Votre inscription est enregistré, vous pouvez vous connectez !");
       navigate("/connexion"); // Redirige l'utilisateur vers la page d'accueil après une inscription réussie
     } catch (error) {
       console.error(error.message);
