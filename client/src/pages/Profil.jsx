@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-alert */
-import { useState, useEffect } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import "../style/Profil.scss";
 
@@ -10,12 +10,12 @@ function Profil() {
   const user = person?.user || {};
   const [formData, setFormData] = useState({
     email: user.email || "",
-    password: "",
     pseudo: user.pseudo || "",
     postal_code: user.postal_code || "",
     city: user.city || "",
     firstname: user.firstname || "",
     lastname: user.lastname || "",
+    password: "",
   });
 
   useEffect(() => {
