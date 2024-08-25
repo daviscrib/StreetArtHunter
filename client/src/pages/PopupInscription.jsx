@@ -33,6 +33,7 @@ function PopupInscription() {
       navigate("/connexion"); // Redirige l'utilisateur vers la page d'accueil après une inscription réussie
     } catch (error) {
       console.error(error.message);
+      alert("Votre inscription n'a pas été prise en compte !");
     }
   };
 
