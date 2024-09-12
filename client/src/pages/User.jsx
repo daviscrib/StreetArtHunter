@@ -1,6 +1,6 @@
-import { useState } from "react";
 import axios from "axios";
-
+import { useState } from "react";
+import Shooting from "../components/Shooting";
 import { useAuth } from "../context/AuthContext";
 
 function User() {
@@ -60,10 +60,15 @@ function User() {
         celle-ci.
       </p>
       <h3>Prendre une photo</h3>
+      <div>
+        <Shooting />
+      </div>
       <div className="webcam-container">
         <form onSubmit={handleSubmitAddress}>
           <input type="text" value={address} onChange={handleAddress} />
-          <p>Les coordonnées GPS : lat : {coord.lat}, lon: {coord.lon}</p>
+          <p>
+            Les coordonnées GPS : lat : {coord.lat}, lon: {coord.lon}
+          </p>
           <button type="submit"> Search</button>
         </form>
       </div>
