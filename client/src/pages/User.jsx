@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-
+import Shooting from "../components/Shooting";
 import { useAuth } from "../context/AuthContext";
 
 function User() {
@@ -60,7 +60,9 @@ function User() {
         celle-ci.
       </p>
       <h3>Prendre une photo</h3>
-      <div />
+      <div>
+        <Shooting />
+      </div>
       <div className="webcam-container">
         <form onSubmit={handleSubmitAddress}>
           <input type="text" value={address} onChange={handleAddress} />
