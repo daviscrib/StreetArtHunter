@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import { useRef, useState } from "react";
 import { Camera } from "react-camera-pro";
 
 function Shooting() {
   const camera = useRef(null);
-  const [image, setImage] = React.useState(null);
+  const [image, setImage] = useState(null);
 
+  // Fonction pour prendre une photo
   const takePhoto = () => {
     if (camera.current) {
       try {
@@ -20,10 +21,15 @@ function Shooting() {
 
   return (
     <div>
+      {/* Camera component */}
       <Camera ref={camera} aspectRatio={16 / 9} />
+
+      {/* Bouton pour prendre une photo */}
       <button type="button" onClick={takePhoto}>
         Take Photo
       </button>
+
+      {/* Affichage de l'image capturée */}
       {image && (
         <div>
           <h2>Captured Image:</h2>
